@@ -7,7 +7,7 @@
 module Course.StateT where
 
 import Course.Core
-import Course.ExactlyOne
+import Course.Id
 import Course.Optional
 import Course.List
 import Course.Functor
@@ -88,14 +88,14 @@ instance Monad f => Monad (StateT s f) where
   (=<<) =
     error "todo: Course.StateT (=<<)#instance (StateT s f)"
 
--- | A `State'` is `StateT` specialised to the `ExactlyOne` functor.
+-- | A `State'` is `StateT` specialised to the `Id` functor.
 type State' s a =
-  StateT s ExactlyOne a
+  StateT s Id a
 
 -- | Provide a constructor for `State'` values
 --
 -- >>> runStateT (state' $ runState $ put 1) 0
--- ExactlyOne  ((),1)
+-- Id ((),1)
 state' ::
   (s -> (a, s))
   -> State' s a

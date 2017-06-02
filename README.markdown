@@ -179,7 +179,7 @@ compiler error.
 It is recommended to perform some exercises before others. The first step is to
 inspect the introduction modules.
 
-* `Course.ExactlyOne`
+* `Course.Id`
 * `Course.Validation`
 
 They contain examples of data structures and Haskell syntax. They do not contain

@@ -111,14 +111,3 @@ ifThenElse True t _ =
   t
 ifThenElse False _ f =
   f
-
-bool ::
-  a
-  -> a
-  -> Bool
-  -> a
-bool f _ False =
-  f
-bool _ t True =
-  t
-
